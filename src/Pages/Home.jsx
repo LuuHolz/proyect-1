@@ -1,9 +1,20 @@
 import React from 'react'
+import NavbarHome from '../Components/Navbar'
+import Card from '../Components/Card'
 
-function home() {
+function home({cuadros}) {
+
+
   return (
     <div>
-      <h1>Proyecto 1</h1>
+        <NavbarHome/>
+
+        {
+                cuadros.length > 0 && cuadros.map((item) => {
+
+                    return <Card key={item.id} cuadros={item}/>
+                })
+            }
     </div>
   )
 }
