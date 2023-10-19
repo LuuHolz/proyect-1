@@ -1,0 +1,41 @@
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.box-card{
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-card{
+    font-size: 32px;
+    text-align: center;
+}
+
+.img-card{
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+
+}
+
+.description-card{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.btn-add{
+    border: 1px solid black;
+    background-color: #eae0ed;
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
