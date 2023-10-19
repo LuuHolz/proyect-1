@@ -10,11 +10,10 @@ function home({cuadros}) {
         <NavbarHome/>
 
         {
-                cuadros.length > 0 && cuadros.map((item) => {
-
-                    return <Card key={item.id} cuadros={item}/>
-                })
-            }
+          cuadros.length > 0 && cuadros.map((item) => {
+              return <Card key={item.id} cuadros={item}/>
+          })
+        }
     </div>
   )
 }
