@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({cuadros}) {
+function Card({cuadros, handleShowModal}) {
   return (
     <>
         <div className='cards-container'>
@@ -9,10 +9,12 @@ function Card({cuadros}) {
                     <img src={cuadros.images} alt="Imagen" className='img-card'/>
                 </div>
                 <p className='description-card'>{cuadros.description}</p>
-                <button className='btn-add'>View</button>
+                <button className="btn-add" onClick={handleShowModal}>
+                  View
+                </button>
         </div>
     </>
   )
 }
 
-export default Card
+export default Card;

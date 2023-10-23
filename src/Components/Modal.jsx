@@ -4,12 +4,23 @@ import Modal from 'react-bootstrap/Modal';
 function ModalAdd({ show, handleClose, cuadros }) {
   return (
     <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
-        <Modal.Title>¡Producto agregado!</Modal.Title>
+      <Modal.Header>
+        <Modal.Title>¡Productos seleccionados!</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
-        <p>{cuadros.title}</p>
+        {cuadros.length > 0 ? (
+          <ul>
+            {cuadros.map((cuadro, index) => (
+              <li key={index}>
+                <img src={cuadro.image} alt="Producto" className="product-image" />
+                {cuadro.title}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No se han seleccionado productos.</p>
+        )}
       </Modal.Body>
 
       <Modal.Footer>
@@ -23,5 +34,3 @@ function ModalAdd({ show, handleClose, cuadros }) {
 }
 
 export default ModalAdd;
-
-
