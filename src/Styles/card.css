@@ -10,6 +10,7 @@
     flex-direction: column;
     border: 1px solid black;
     border-radius: 15px;
+    gap: 20px;
 }
 
 .box-card{
@@ -22,8 +23,9 @@
 }
 
 .title-card{
-    font-size: 32px;
+    font-size: 22px;
     text-align: center;
+    padding-top: 5%;
 }
 
 .box-img{
@@ -41,6 +43,9 @@
 .description-card{
     margin-left: 25px;
     margin-right: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .btn-add{
@@ -50,4 +55,5 @@
     border-radius: 5px;
     margin-left: 25%;
     margin-right: 25%;
+    margin-bottom: 25px;
 }
