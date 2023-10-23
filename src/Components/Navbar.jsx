@@ -10,7 +10,7 @@ function NavbarHome() {
           <Navbar.Brand href="#home">Shop</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Shopping cart</Nav.Link>
+            <Nav.Link href="#features">Shopping</Nav.Link>
             <Nav.Link href="#pricing">My profile</Nav.Link>
           </Nav>
         </Container>
