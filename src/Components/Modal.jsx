@@ -12,10 +12,10 @@ function ModalAdd({ show, handleClose, cuadros }) {
         {cuadros.length > 0 ? (
           <ul>
             {cuadros.map((cuadro, index) => (
-              <li key={index}>
+              <div key={index}>
                 <img src={cuadro.image} alt="Producto" className="product-image" />
                 {cuadro.title}
-              </li>
+              </div>
             ))}
           </ul>
         ) : (
