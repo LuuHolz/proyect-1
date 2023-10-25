@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ModalAdd from '../Components/Modal';
 import NavbarHome from '../Components/Navbar';
 import Card from '../Components/Card';
 
 function Home({ cuadros }) {
+  const [state, dispatch] = useContext(AppContext);
   const [showModal, setShowModal] = useState(false);
-  const [selectedCuadros, setSelectedCuadros] = useState([]);
+
   
   const handleShowModal = (cuadros) => {
     setSelectedCuadros([...selectedCuadros, cuadros]);
@@ -20,11 +21,11 @@ function Home({ cuadros }) {
     <div className="container-elements-home">
       <NavbarHome />
       <div className="box-card">
-        {cuadros.length > 0 &&
-          cuadros.map((item) => {
+        {state.productos.length > 0 &&
+          state.productos.map((item) => {
             return (
               <div key={item.id}>
-                <Card cuadros={item} handleShowModal={() => handleShowModal(item)} />
+                <Card productos={item} handleShowModal={() => handleShowModal(item)} />
               </div>
             );
           })}
